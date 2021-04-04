@@ -14,8 +14,7 @@ if (!data.konular.length) {
           var mesaj="";
   for (let i = 0; i < data.konular.length; i++){
     
-    message.channel.createWebhook('SinnerClownCeviri.Com', message.author.displayAvatarURL)
-.then(w => w.send({embeds: [
+    message.channel.send({embeds: [
     new Discord.MessageEmbed().
   setAuthor('Forum da son durum', message.author.displayAvatarURL())
   .setThumbnail(sonkonu[i]["avatar"])
