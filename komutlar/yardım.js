@@ -76,7 +76,7 @@ exports.run = async (client, message, args) => {
    .setColor('#2667FF')
    .setFooter('Bu komutu kullanan kullanıcı ' + message.author.tag, message.author.displayAvatarURL())
    .setDescription(client.commands.filter(cmd => cmd.conf.kategori === 'Sahip').map(cmd => `:white_small_square: - **${prefix}${cmd.help.name}** ${cmd.help.description}`).join("\n "))
-         .addField("» Linkler", ` [Davet Et](https://discord.com/oauth2/authorize?client_id=BOTUNİDSİ&scope=bot&permissions=2108157183)` + "** | **" + `[Destek Sunucusu](https://discord.gg/2vPdmYz)`  + "** | **" + `[Oy Ver](https://bit.ly/3980hKq)`  + "** | **" + `[Web Sitesi](https://gnarge.xyz/)  `, false)
+         .addField("» Linkler", ` [Davet Et](https://discord.com/oauth2/authorize?client_id=825742618528972890&scope=bot&permissions=2108157183)` + "** | **" + `[Destek Sunucusu](https://discord.gg/2vPdmYz)`  + "** | **" + `[Oy Ver](https://bit.ly/3980hKq)`  + "** | **" + `[Web Sitesi](https://gnarge.xyz/)  `, false)
     return message.channel.send(Sahip)
               
         
@@ -90,14 +90,7 @@ exports.run = async (client, message, args) => {
   .setThumbnail(client.user.avatarURL())
   .setColor('#FFFB05')
   .setDescription(`**Örnek Kullanım:** \`${prefix}yardım Kategori\` \n **Örnek:** \`${prefix}yardım Genel\``)
-  .addField('Kategoriler:', `
-  **[${prefix}yardım Genel](https://discord.gg/2vPdmYz)** 
-  **[${prefix}yardım Eğlence](https://discord.gg/2vPdmYz)**
-  **[${prefix}yardım Moderasyon](https://discord.gg/2vPdmYz)**
-  **[${prefix}yardım Sunucu](https://discord.gg/2vPdmYz)**
-  **[${prefix}yardım Sahip](https://discord.gg/2vPdmYz)**
-  `)
-  .addField("» Linkler", ` [Davet Et](https://discord.com/oauth2/authorize?client_id=BOTUNİDSİ&scope=bot&permissions=2108157183)` + "** | **" + `[Destek Sunucusu](https://discord.gg/UTcW9zbg)`  + "** | **" + `[Oy Ver](https://discord.gg/UTcW9zbg)`  + "** | **" + `[Web Sitesi](https://gnarge.xyz/)  `, false)
+    .addField("» Linkler", ` [Davet Et](https://discord.com/oauth2/authorize?client_id=825742618528972890&scope=bot&permissions=2108157183)` + "** | **" + `[Web Sitesi](https://sinnerclownceviri.com)  `, false)
 
   .setFooter('Bu komutu kullanan kullanıcı ' + message.author.tag, message.author.displayAvatarURL())
   message.channel.send(embed)
