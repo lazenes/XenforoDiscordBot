@@ -12,11 +12,11 @@ if (!data.konular.length) {
           const [sonkonu] = data.konular;
           
  let konu = new Discord.MessageEmbed()
-  .setAuthor('Forum Son Konu Bilgisi', message.author.displayAvatarURL())
-  .setThumbnail(client.user.avatarURL())
+  .setAuthor('Forum da son durum', message.author.displayAvatarURL())
+  .setThumbnail(sonkonu["avatar"])
   .setColor('#ff1b1b')
   .setDescription(`**Konu Adı:** \`${sonkonu["baslik"]}\` \n **Yayınlayan:** \`${sonkonu["konu_sahibi"]}\``)
-  .addField("» Konu Linki", `[sonkonu.baslik](sonkonu.KonuLink)`  , false)
+  .addField("» Konu Linki", `[${sonkonu["baslik"]}](${sonkonu["KonuLink"]})`  , false)
   .setFooter('Bu komutu kullanan kullanıcı ' + message.author.tag, message.author.displayAvatarURL())
  
  
