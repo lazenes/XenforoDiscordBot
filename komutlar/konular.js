@@ -9,19 +9,21 @@ const data = await fetch("https://sinnerclownceviri.com/dcbot.php") .then(respon
 if (!data.konular.length) {
             return message.channel.send(`Görüntülenecek İçerik Yok`);
         }else{
-          const [sonkonu] = data.konular;
-          
- let konu = new Discord.MessageEmbed()
+         
+          const sonkonu = data.konular;
+for (var i = 0; i < count(sonkonu); i++) {         
+ /*let konu = new Discord.MessageEmbed()
   .setAuthor('Forum da son durum', message.author.displayAvatarURL())
-  .setThumbnail(sonkonu["avatar"])
+  .setThumbnail(sonkonu[i]["avatar"])
   .setColor('#ff1b1b')
-  .setDescription(`**Son Yorum:** \` ${sonkonu["sonYorum"]} \` \n **Yorum Sahibi:** \` ${sonkonu["yorumSahibi"]} \` \n **Konu Adı:** \` ${sonkonu["baslik"]} \` \n **Yayınlayan:** \` ${sonkonu["konuSahibi"]} \``)
-  .addField("» Konu Linki", `[${sonkonu["baslik"]}](${sonkonu["KonuLink"]})`  , false)
+  .setDescription(`**Son Yorum:** \` ${sonkonu[i]["sonYorum"]} \` \n **Yorum Sahibi:** \` ${sonkonu[i]["yorumSahibi"]} \` \n **Konu Adı:** \` ${sonkonu[i]["baslik"]} \` \n **Yayınlayan:** \` ${sonkonu[i]["konuSahibi"]} \``)
+  .addField("» Konu Linki", `[${sonkonu[i]["baslik"]}](${sonkonu[i]["KonuLink"]})`  , false)
   .setFooter('Bu komutu kullanan kullanıcı ' + message.author.tag, message.author.displayAvatarURL())
+ */
  
- 
-   return message.channel.send(konu);
+   return message.channel.send(i);
   
+}
 }
 }
   
