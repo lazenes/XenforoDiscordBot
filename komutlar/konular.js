@@ -13,10 +13,10 @@ if (!data.konular.length) {
           const sonkonu = data.konular;
           var mesaj="";
   for (let i = 0; i < data.konular.length; i++){
+
     
-   
     
-       
+     
  let konu = new Discord.MessageEmbed()
   .setAuthor('Forum da son durum', message.author.displayAvatarURL())
   .setThumbnail(sonkonu[i]["avatar"])
