@@ -11,8 +11,9 @@ if (!data.konular.length) {
         }else{
          
           const sonkonu = data.konular;
-          
-          for(var i in data.konular) {
+          var mesaj="";
+  for (let i = 0; i < data.konular.length; i++){
+        
  /*let konu = new Discord.MessageEmbed()
   .setAuthor('Forum da son durum', message.author.displayAvatarURL())
   .setThumbnail(sonkonu[i]["avatar"])
@@ -21,10 +22,12 @@ if (!data.konular.length) {
   .addField("» Konu Linki", `[${sonkonu[i]["baslik"]}](${sonkonu[i]["KonuLink"]})`  , false)
   .setFooter('Bu komutu kullanan kullanıcı ' + message.author.tag, message.author.displayAvatarURL())
  */
- 
-   return message.channel.send(data.konular.length);
+
+    return message.channel.send(i);
+   
   
 }
+ 
 }
 }
   
