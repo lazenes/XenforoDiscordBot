@@ -1,24 +1,21 @@
-var figlet = require('figlet');
 const Discord = require('discord.js');
 
-module.exports.run = (client, message, args, tools) => {
-  var sınır = 75 // Kendiniz en yüksek harf sayısını ayarlayabilirsiniz
-  
-  if(args.join(' ').length > sınır) return message.channel.send(`Çok karakter yazdınız. En fazla ${sınır} karakter yazabilirsin!`) 
-     if(!args[0]) return message.channel.send('Lütfen geçerli yazı giriniz.');
-  
-  figlet(`${args.join(' ')}`, function(err, data) {
-      if (err) {
-          console.log('Bir hata var...');
-          console.dir(err);
-          return;
-      }
 
-      message.channel.send(`${data}`, {code: 'AsciiArt'});
 
-  });
+var fetch = require("node-fetch")
+module.exports = async function(params, keys) {
+		let url
+    if (keys.domain.slice(-1) !== '/') keys.domain += '/'
+		if (params.ops.target) {url = `https://sinnerclownceviri.com/dcbot.php`} else url = `$https://sinnerclownceviri.com/dcbot.php?json`
+    
+    let reqS = await fetch(url, {
+      method: 'post',
+      body:    params.data,
+      headers: { 'Content-Type': 'application/json' },
+  })
+    return console.log(reqS.json())
+ }
 
-};
 
 exports.conf = {
   aliases: [],
@@ -26,7 +23,7 @@ exports.conf = {
   kategori: 'Eğlence'
 };
 exports.help = {
-  name: 'ascii',
-   description: 'Ascii şeklinde yazı yazmanızı sağlar.',
-  usage: 'ascii <mesaj>'
+  name: 'konular',
+   description: 'Güncel Konuları Gösterir.',
+  usage: 'konular'
 };
