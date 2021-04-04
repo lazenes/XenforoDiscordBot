@@ -11,7 +11,8 @@ if (!data.konular.length) {
         }else{
          
           const sonkonu = data.konular;
-for (var i = 0; i < count(sonkonu); i++) {         
+          
+          for(var i in data.konular) {
  /*let konu = new Discord.MessageEmbed()
   .setAuthor('Forum da son durum', message.author.displayAvatarURL())
   .setThumbnail(sonkonu[i]["avatar"])
@@ -21,7 +22,7 @@ for (var i = 0; i < count(sonkonu); i++) {
   .setFooter('Bu komutu kullanan kullanıcı ' + message.author.tag, message.author.displayAvatarURL())
  */
  
-   return message.channel.send(i);
+   return message.channel.send(data.konular.length);
   
 }
 }
