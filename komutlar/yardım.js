@@ -93,7 +93,6 @@ exports.run = async (client, message, args) => {
   
 }
     
-//EMİRHAN SARAÇ TARAFINDAN YAPILMIŞTIR 2021 DE YENİLENMİŞTİR!
 
   exports.conf = {
     aliases: ['help', 'cmds', 'komutlar','y'], //Komutun farklı yazılışlarla kullanımları
