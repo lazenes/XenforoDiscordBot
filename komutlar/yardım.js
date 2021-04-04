@@ -97,7 +97,7 @@ exports.run = async (client, message, args) => {
   **[${prefix}yardım Sunucu](https://discord.gg/2vPdmYz)**
   **[${prefix}yardım Sahip](https://discord.gg/2vPdmYz)**
   `)
-  .addField("» Linkler", ` [Davet Et](https://discord.com/oauth2/authorize?client_id=BOTUNİDSİ&scope=bot&permissions=2108157183)` + "** | **" + `[Destek Sunucusu](https://discord.gg/2vPdmYz)`  + "** | **" + `[Oy Ver](https://bit.ly/3980hKq)`  + "** | **" + `[Web Sitesi](https://gnarge.xyz/)  `, false)
+  .addField("» Linkler", ` [Davet Et](https://discord.com/oauth2/authorize?client_id=BOTUNİDSİ&scope=bot&permissions=2108157183)` + "** | **" + `[Destek Sunucusu](https://discord.gg/UTcW9zbg)`  + "** | **" + `[Oy Ver](https://discord.gg/UTcW9zbg)`  + "** | **" + `[Web Sitesi](https://gnarge.xyz/)  `, false)
 
   .setFooter('Bu komutu kullanan kullanıcı ' + message.author.tag, message.author.displayAvatarURL())
   message.channel.send(embed)
