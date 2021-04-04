@@ -14,8 +14,8 @@ if (!data.konular.length) {
           var mesaj="";
   for (let i = 0; i < data.konular.length; i++){
 
-    
-    
+ 
+  
      
  let konu = new Discord.MessageEmbed()
   .setAuthor('Forum da son durum', message.author.displayAvatarURL())
@@ -25,9 +25,13 @@ if (!data.konular.length) {
   .addField("» Konu Linki", `[${sonkonu[i]["baslik"]}](${sonkonu[i]["KonuLink"]})`  , false)
   .setFooter('Bu komutu kullanan kullanıcı ' + message.author.tag, message.author.displayAvatarURL())
  
+message.channel.send({embed: konu});
 
+
+ 
+ /*
     return message.channel.send(konu);
-   
+   */
   
 }
  
