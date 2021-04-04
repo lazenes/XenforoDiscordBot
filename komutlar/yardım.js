@@ -9,79 +9,14 @@ exports.run = async (client, message, args) => {
   .setAuthor('Konular', message.author.displayAvatarURL())
   .setColor('#2667FF')
   .setFooter('Bu komutu kullanan kullanıcı ' + message.author.tag, message.author.displayAvatarURL())
-   .setDescription(client.commands.filter(cmd => cmd.conf.kategori === 'Forum').map(cmd => `:white_small_square: - **${prefix}${cmd.help.name}** ${cmd.help.description}`).join("\n "))
+   .setDescription(client.commands.filter(cmd => cmd.conf.kategori === 'Genel').map(cmd => `:white_small_square: - **${prefix}${cmd.help.name}** ${cmd.help.description}`).join("\n "))
     .addField("» Linkler", ` [Davet Et](https://discord.com/oauth2/authorize?client_id=825742618528972890&scope=bot&permissions=2108157183)` + "** | **" + `[Web Sitesi](https://sinnerclownceviri.com)  `, false)
               return message.channel.send(Konular)
          
        
        return;
     }
-//GENEL KOMUTU
-    if(args[0] === "Genel" || args[0] === "genel" || args[0] === "General" || args[0] === "general") {
-              let Genel = new Discord.MessageEmbed()
-  .setAuthor('Genel', message.author.displayAvatarURL())
-  .setColor('#2667FF')
-  .setFooter('Bu komutu kullanan kullanıcı ' + message.author.tag, message.author.displayAvatarURL())
-   .setDescription(client.commands.filter(cmd => cmd.conf.kategori === 'Genel').map(cmd => `:white_small_square: - **${prefix}${cmd.help.name}** ${cmd.help.description}`).join("\n "))
-        .addField("» Linkler", ` [Davet Et](https://discord.com/oauth2/authorize?client_id=BOTUNİDSİ&scope=bot&permissions=2108157183)` + "** | **" + `[Destek Sunucusu](https://discord.gg/2vPdmYz)`  + "** | **" + `[Oy Ver](https://bit.ly/3980hKq)`  + "** | **" + `[Web Sitesi](https://gnarge.xyz/)  `, false)
-              return message.channel.send(Genel)
-         
-       
-       return;
-    }
-    //SUNUCU KOMUTU
-      if(args[0] === "Sunucu" || args[0] === "sunucu") {
-              let Sunucu = new Discord.MessageEmbed()
-  .setAuthor('Sunucu', message.author.displayAvatarURL())
-  .setColor('#2667FF')
-  .setFooter('Bu komutu kullanan kullanıcı ' + message.author.tag, message.author.displayAvatarURL())
-   .setDescription(client.commands.filter(cmd => cmd.conf.kategori === 'Sunucu').map(cmd => `:white_small_square: - **${prefix}${cmd.help.name}** ${cmd.help.description}`).join("\n "))
-        .addField("» Linkler", ` [Davet Et](https://discord.com/oauth2/authorize?client_id=BOTUNİDSİ&scope=bot&permissions=2108157183)` + "** | **" + `[Destek Sunucusu](https://discord.gg/2vPdmYz)`  + "** | **" + `[Oy Ver](https://bit.ly/3980hKq)`  + "** | **" + `[Web Sitesi](https://gnarge.xyz/)  `, false)
-              return message.channel.send(Sunucu)
-         
-      
 
-       return;
-    }
-//EĞLENCE KOMUTU
-  if(args[0] === "Eğlence" || args[0] === "eğlence" || args[0] === "Fun" || args[0] === "fun") {
-   let Eğlence = new Discord.MessageEmbed()
-  .setAuthor('Eğlence', message.author.displayAvatarURL())
-  .setColor('#2667FF')
-  .setFooter('Bu komutu kullanan kullanıcı ' + message.author.tag, message.author.displayAvatarURL())
-   .setDescription(client.commands.filter(cmd => cmd.conf.kategori === 'Eğlence').map(cmd => `:white_small_square: - **${prefix}${cmd.help.name}** ${cmd.help.description}`).join("\n "))
-        .addField("» Linkler", ` [Davet Et](https://discord.com/oauth2/authorize?client_id=BOTUNİDSİ&scope=bot&permissions=2108157183)` + "** | **" + `[Destek Sunucusu](https://discord.gg/2vPdmYz)`  + "** | **" + `[Oy Ver](https://bit.ly/3980hKq)`  + "** | **" + `[Web Sitesi](https://gnarge.xyz/)  `, false)
-   return message.channel.send(Eğlence)
-  
-      
-           return;
-  }
-  //MODERASYON KOMUTU
-  if(args[0] === "Moderasyon" || args[0] === "moderasyon" || args[0] === "moderation" || args[0] === "Moderation") {
-   let Moderasyon = new Discord.MessageEmbed()
-  .setAuthor('Moderasyon', message.author.displayAvatarURL())
-  .setColor('#2667FF')
-  .setFooter('Bu komutu kullanan kullanıcı ' + message.author.tag, message.author.displayAvatarURL())
-   .setDescription(client.commands.filter(cmd => cmd.conf.kategori === 'Moderasyon').map(cmd => `:white_small_square: - **${prefix}${cmd.help.name}** ${cmd.help.description}`).join("\n "))
-        .addField("» Linkler", ` [Davet Et](https://discord.com/oauth2/authorize?client_id=BOTUNİDSİ&scope=bot&permissions=2108157183)` + "** | **" + `[Destek Sunucusu](https://discord.gg/2vPdmYz)`  + "** | **" + `[Oy Ver](https://bit.ly/3980hKq)`  + "** | **" + `[Web Sitesi](https://gnarge.xyz/)  `, false)
-   return message.channel.send(Moderasyon)
-             
-       
-               return;
-  }
-     //SAHİP KOMUTU
-  if(args[0] === "Sahip" || args[0] === "sahip" ) {
-    let Sahip = new Discord.MessageEmbed()
-   .setAuthor('Moderasyon', message.author.displayAvatarURL())
-   .setColor('#2667FF')
-   .setFooter('Bu komutu kullanan kullanıcı ' + message.author.tag, message.author.displayAvatarURL())
-   .setDescription(client.commands.filter(cmd => cmd.conf.kategori === 'Sahip').map(cmd => `:white_small_square: - **${prefix}${cmd.help.name}** ${cmd.help.description}`).join("\n "))
-         .addField("» Linkler", ` [Davet Et](https://discord.com/oauth2/authorize?client_id=825742618528972890&scope=bot&permissions=2108157183)` + "** | **" + `[Destek Sunucusu](https://discord.gg/2vPdmYz)`  + "** | **" + `[Oy Ver](https://bit.ly/3980hKq)`  + "** | **" + `[Web Sitesi](https://gnarge.xyz/)  `, false)
-    return message.channel.send(Sahip)
-              
-        
-                return;
-   }
 
 //YARDIM KOMUTU
   
@@ -89,7 +24,7 @@ exports.run = async (client, message, args) => {
   .setAuthor('Yardım Komutları', message.author.displayAvatarURL())
   .setThumbnail(client.user.avatarURL())
   .setColor('#FFFB05')
-  .setDescription(`**Örnek Kullanım:** \`${prefix}yardım Kategori\` \n **Örnek:** \`${prefix}yardım Genel\``)
+  .setDescription(`**Örnek Kullanım:** \`${prefix}yardım komut\` \n **Örnek:** \`${prefix}yardım Konular\``)
     .addField("» Linkler", ` [Davet Et](https://discord.com/oauth2/authorize?client_id=825742618528972890&scope=bot&permissions=2108157183)` + "** | **" + `[Web Sitesi](https://sinnerclownceviri.com)  `, false)
 
   .setFooter('Bu komutu kullanan kullanıcı ' + message.author.tag, message.author.displayAvatarURL())

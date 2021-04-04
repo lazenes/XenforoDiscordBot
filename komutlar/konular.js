@@ -43,10 +43,10 @@ message.channel.send({embed: konu});
 exports.conf = {
   aliases: ['Konular','konular'],
   permLevel: 0,
-  kategori: 'Forum'
+  kategori: 'Genel'
 };
 exports.help = {
   name: 'konular',
    description: 'Güncel Konuları Gösterir.',
-  usage: 'konular'
+  usage: 'Konular'
 };
