@@ -18,17 +18,15 @@ if (!data.konular.length) {
   
      
  let konu = new Discord.MessageEmbed()
-  .setAuthor('Forum da son durum', message.author.displayAvatarURL())
+  .setAuthor('Forum da Öne çıkan '+(i+1)+' Numaralı Konu', message.author.displayAvatarURL())
   .setThumbnail(sonkonu[i]["avatar"])
-  .setColor('#ff1b1b')
-  .setDescription(`**Son Yorum:** \` ${sonkonu[i]["sonYorum"]} \` \n **Yorum Sahibi:** \` ${sonkonu[i]["yorumSahibi"]} \` \n **Konu Adı:** \` ${sonkonu[i]["baslik"]} \` \n **Yayınlayan:** \` ${sonkonu[i]["konuSahibi"]} \``)
+  .setColor('RANDOM')
+  .setDescription(`**Konu Adı:** \` ${sonkonu[i]["baslik"]} \` \n   **Konu Sahibi:** \` ${sonkonu[i]["konuSahibi"]} \` \n  **Toplam Yorum:** \` ${sonkonu[i]["toplamYorum"]} \` Adet \n **Son Yorum:** \` ${sonkonu[i]["sonYorum"]} \` \n **Yorum Sahibi:** \` ${sonkonu[i]["yorumSahibi"]} \``)
   .addField("» Konu Linki", `[${sonkonu[i]["baslik"]}](${sonkonu[i]["KonuLink"]})`  , false)
   .setFooter('Bu komutu kullanan kullanıcı ' + message.author.tag, message.author.displayAvatarURL())
  
 message.channel.send({embed: konu});
 
-
- 
  /*
     return message.channel.send(konu);
    */
