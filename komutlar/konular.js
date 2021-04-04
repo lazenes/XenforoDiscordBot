@@ -1,12 +1,10 @@
 const Discord = require('discord.js');
 
-
 exports.run = async (client, message, args) => {
    
-fetch("https://sinnerclownceviri.com/dcbot.php")
-.then(response => {
+fetch("https://sinnerclownceviri.com/dcbot.php").then(response => {
     data = response.json(); //data is a json object
-   // document.getElementById("YOUR ID").innerHTML = data["SOME KEY"];
+
  let embed = new Discord.MessageEmbed()
   .setAuthor('Forum Son Konu Bilgisi', message.author.displayAvatarURL())
   .setThumbnail(client.user.avatarURL())
@@ -15,11 +13,12 @@ fetch("https://sinnerclownceviri.com/dcbot.php")
   .addField("» KonuL inki", `[data['394']['baslik']](data['394']['KonuLink'])`  , false)
 
   .setFooter('Bu komutu kullanan kullanıcı ' + message.author.tag, message.author.displayAvatarURL())
-  message.channel.send(embed)
   
+  return message.channel.send("deneme");
   
   
 })
+  
 
       }
 
