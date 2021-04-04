@@ -15,8 +15,7 @@ if (!data.konular.length) {
   .setAuthor('Forum Son Konu Bilgisi', message.author.displayAvatarURL())
   .setThumbnail(client.user.avatarURL())
   .setColor('#ff1b1b')
- // .setDescription("**Konu Adı:** " + sonkonu.0.baslik + " \n **Yayınlayan:** " + sonkonu.konu_sahibi)
-  .addField('Konu Adı', trim(sonkonu.0.baslik, 1024))
+  .setDescription(`**Konu Adı:** \`${sonkonu["baslik"]}\` \n **Yayınlayan:** \`${sonkonu["konu_sahibi"]}\``)
   .addField("» Konu Linki", `[sonkonu.baslik](sonkonu.KonuLink)`  , false)
   .setFooter('Bu komutu kullanan kullanıcı ' + message.author.tag, message.author.displayAvatarURL())
  
